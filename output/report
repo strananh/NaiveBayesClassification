@@ -1,0 +1,24 @@
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.97      0.92      0.95      5000
+          1       0.93      0.97      0.95      5000
+
+avg / total       0.95      0.95      0.95     10000
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.97      0.92      0.95      5000
+          1       0.93      0.97      0.95      5000
+
+avg / total       0.95      0.95      0.95     10000
+
+Classification Report:
+             precision    recall  f1-score   support
+
+          0       0.97      0.92      0.95      5000
+          1       0.92      0.97      0.95      5000
+
+avg / total       0.95      0.95      0.95     10000
+
