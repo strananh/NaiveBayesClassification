@@ -160,30 +160,11 @@ def buildDictOfTrain():
         dfLocal.loc[i, 'contents'] = contents
 
     try:
-        vctz_1gram = CountVectorizer(encoding = "utf-8", ngram_range = (1, 1), max_df = 0.8, min_df = 50, max_features = 10000)
+        vctz_1gram = CountVectorizer(encoding = "utf-8", ngram_range = (1, 4), max_df = 0.8, min_df = 50, max_features = 10000)
         vctz_1gram.fit(dfLocal["contents"])
         add2DictOfTrain(vctz_1gram.vocabulary_.keys())
     except:
         pass
-    try:
-        vctz_2gram = CountVectorizer(encoding = "utf-8", ngram_range = (2, 2), max_df = 0.8, min_df = 50, max_features = 10000)
-        vctz_2gram.fit(dfLocal["contents"])
-        add2DictOfTrain(vctz_2gram.vocabulary_.keys())
-    except:
-        pass
-    try:
-        vctz_3gram = CountVectorizer(encoding = "utf-8", ngram_range = (3, 3), max_df = 0.8, min_df = 50, max_features = 10000)
-        vctz_3gram.fit(dfLocal["contents"])
-        add2DictOfTrain(vctz_3gram.vocabulary_.keys())
-    except:
-        pass
-    try:
-        vctz_4gram = CountVectorizer(encoding = "utf-8", ngram_range = (4, 4), max_df = 0.8, min_df = 50, max_features = 10000)
-        vctz_4gram.fit(dfLocal["contents"])
-        add2DictOfTrain(vctz_4gram.vocabulary_.keys())
-    except:
-        pass
-
     # print(dictOfTrain)
 
 def saveDictOfTrain2File():
